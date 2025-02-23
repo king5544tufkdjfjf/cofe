@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сторінка макет</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Хочеш каву</h1>
+    <div class="head-text">
+        <p>Заходь до нас</p>
+    </div>
+
+    <div class="buttons">
+        <button onclick="location.href='#reviews'">Відгуки</button>
+        <button onclick="location.href='#menu'">Меню</button>
+        <button onclick="location.href='#register'">Реєстрація</button>
+    </div>
+
+    <div class="history">
+        <h2>Історія нашого кафе</h2>
+        <p>
+            У самому серці міста, де пахне свіжою випічкою та ароматною кавою, зародилася наша маленька кав’ярня. 
+            Все почалося у 2010 році, коли двоє друзів, пристрасних любителів кави, вирішили створити місце, 
+            де кожен міг би насолодитися справжнім смаком якісного еспресо.
+        </p>
+        <p>
+            Ми подорожували світом у пошуках найкращих кавових зерен, спілкувалися з фермерами 
+            та відкривали секрети обсмажування. Сьогодні наша кава — це не просто напій, а справжнє мистецтво, 
+            створене з любов’ю та увагою до деталей.
+        </p>
+        <p>
+            Запрошуємо вас у нашу атмосферну кав’ярню, де кожна чашка кави має свою історію, 
+            а кожен відвідувач — частина нашої великої кавової родини!
+        </p>
+    </div>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const buttons = document.querySelectorAll(".buttons button");
+
+        buttons.forEach(button => {
+            button.addEventListener("click", function () {
+                buttons.forEach(btn => btn.classList.remove("active")); // Прибираємо активний стан у всіх кнопок
+                this.classList.add("active"); // Додаємо активний стан до натиснутої кнопки
+            });
+        });
+    });
+</script>
+
+</html>
